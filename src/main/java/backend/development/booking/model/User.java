@@ -1,5 +1,6 @@
 package backend.development.booking.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,5 +17,17 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private String email;
+    @Column(nullable = false)
+    private String firstName;
+    @Column(nullable = false)
+    private String lastName;
+    @Column(nullable = false)
+    private String password;
+
+    public enum RoleName {
+        ADMIN,
+        CUSTOMER
+    }
 }

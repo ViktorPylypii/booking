@@ -6,10 +6,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.math.BigDecimal;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
 
 @Entity
 @Data
@@ -21,9 +20,13 @@ public class Accommodation {
     private long id;
     //@Column(nullable = false)
     //private Address location;
+    @Column(nullable = false)
     private String size;
+    @Column(nullable = false)
     private String amenities;
+    @Column(nullable = false)
     private BigDecimal dalyRate;
+    @Column(nullable = false)
     private Integer availability;
 
 }
