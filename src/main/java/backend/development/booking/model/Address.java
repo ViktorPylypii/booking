@@ -12,18 +12,20 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "users")
-public class User {
+@Table(name = "addresses")
+public class Address {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType. IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String email;
+    private String city;
     @Column(nullable = false)
-    private String firstName;
+    private String country;
     @Column(nullable = false)
-    private String lastName;
+    private String street;
     @Column(nullable = false)
-    private String password;
-
+    private Integer building;
+    private Integer flat;
+    @Column(nullable = false)
+    private boolean isDeleted = false;
 }

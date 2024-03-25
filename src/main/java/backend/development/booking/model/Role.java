@@ -8,22 +8,24 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 @Entity
+@Table(name = "roles")
 @Data
 @NoArgsConstructor
-@Table(name = "users")
-public class User {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
-    private String email;
-    @Column(nullable = false)
-    private String firstName;
-    @Column(nullable = false)
-    private String lastName;
-    @Column(nullable = false)
-    private String password;
+    @Column(nullable = false, unique = true)
+    @JdbcTypeCode(SqlTypes.VARCHAR)
+    private RoleName roleName;
 
+
+    public enum RoleName {
+        ADMIN,
+        CUSTOMER
+    }
 }
