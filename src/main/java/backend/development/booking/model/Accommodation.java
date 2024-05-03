@@ -18,14 +18,16 @@ public class Accommodation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    //@Column(nullable = false)
-    //private Address location;
+    @Column(nullable = false)
+    private Address location;
     @Column(nullable = false)
     private String size;
     @Column(nullable = false)
     private String amenities;
     @Column(nullable = false)
     private BigDecimal dalyRate;
+    @Column(nullable = false)
+    private Address address;
     @Column(nullable = false)
     private Integer availability;
 
