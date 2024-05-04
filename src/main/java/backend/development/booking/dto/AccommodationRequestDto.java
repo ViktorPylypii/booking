@@ -3,9 +3,8 @@ package backend.development.booking.dto;
 import backend.development.booking.model.Address;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
-
 import java.math.BigDecimal;
+import lombok.Data;
 
 @Data
 public class AccommodationRequestDto {

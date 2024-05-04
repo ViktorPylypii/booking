@@ -30,7 +30,9 @@ public class AccommodationServiceImpl implements AccommodationService {
         Accommodation accommodation = accommodationMapper.toModel(requestDto);
         accommodation.setAddress(saveAddress);
 
-        AccommodationResponseDto responseDto = accommodationMapper.toDto(accommodationRepository.save(accommodation));
+        AccommodationResponseDto responseDto = accommodationMapper
+                .toDto(accommodationRepository.save(accommodation));
+
         return responseDto;
     }
 }

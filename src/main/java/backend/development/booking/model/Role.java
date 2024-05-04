@@ -23,7 +23,6 @@ public class Role {
     @JdbcTypeCode(SqlTypes.VARCHAR)
     private RoleName roleName;
 
-
     public enum RoleName {
         ADMIN,
         CUSTOMER

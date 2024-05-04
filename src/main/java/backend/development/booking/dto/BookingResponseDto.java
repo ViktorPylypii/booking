@@ -2,9 +2,8 @@ package backend.development.booking.dto;
 
 import backend.development.booking.model.Accommodation;
 import backend.development.booking.model.Customer;
-import lombok.Data;
-
 import java.time.LocalDate;
+import lombok.Data;
 
 @Data
 public class BookingResponseDto {
